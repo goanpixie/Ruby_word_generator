@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'words/index'
 
+  root 'words#index'
+
+  post 'create_word' => "words#create"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
