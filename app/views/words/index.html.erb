@@ -1,2 +1,12 @@
-<h1>Words#index</h1>
-<p>Find me in app/views/words/index.html.erb</p>
+
+
+
+<div>
+	<h2>Random word attempt #<%= session[:views]%></h2>
+	<p><%=session[:random_word] if session[:random_word].present?%></p>
+</div>
+
+<form action='/create_word' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type='submit' value='Generate' />
+</form> 
